@@ -5,9 +5,9 @@
   "repository": "git@github.com:ricecakeAJ/admin-v2-fe.git",
   "author": "jaina <981985248@qq.com>",
   "license": "MIT",
-  "scripts":{
-    "dev":"node_modules/.bin/webpack-dev-server",
-    "dist":"node_modules/.bin/webpack -p"
+  "scripts": {
+    "dev": "node_modules/.bin/webpack-dev-server",
+    "dist": "node_modules/.bin/webpack -p"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
@@ -26,8 +26,8 @@
     "webpack-dev-server": "2.9.7"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "react": "16.2.0",
-    "react-dom": "16.2.0"
+    "react-dom": "16.2.0",
+    "react-router-dom": "4.2.2"
   }
 }

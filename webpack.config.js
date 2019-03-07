@@ -10,6 +10,12 @@ module.exports = {
         //放置在./dist文件夹中，dirname前面是两个下划线
         filename: 'js/app.jsx'
     },
+    resolve:{
+        alias:{
+            page:path.resolve(__dirname,'src/page'),//系统很多地方都引用page时，需要改变page位置时，直接在该处改变
+            component:path.resolve(__dirname,'src/component')
+        }
+    },
     module: {
         rules: [
             //react(jsx)语法的处理
@@ -71,7 +77,8 @@ module.exports = {
     plugins:[
         //处理html文件
         new HtmlWebpackPlugin({
-        template:'./src/index.html'
+        template:'./src/index.html',
+            favicon:'./favicon.ico'
     }),
         //独立css文件
         new ExtractTextPlugin("css/[name].css"),
@@ -81,7 +88,11 @@ module.exports = {
             filename:'js/base.js'
         })],
     devServer: {
-        port:8086
+        port:8086,
+        //本来的用意为，当404时，返回一个指定的页面
+        historyApiFallback:{
+            index:'/dist/index.html'
+        }
    },
 
 };
