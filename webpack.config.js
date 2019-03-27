@@ -13,7 +13,9 @@ module.exports = {
     resolve:{
         alias:{
             page:path.resolve(__dirname,'src/page'),//系统很多地方都引用page时，需要改变page位置时，直接在该处改变
-            component:path.resolve(__dirname,'src/component')
+            component:path.resolve(__dirname,'src/component'),
+            util:path.resolve(__dirname,'src/util'),
+            service:path.resolve(__dirname,'src/service'),
         }
     },
     module: {
@@ -92,6 +94,17 @@ module.exports = {
         //本来的用意为，当404时，返回一个指定的页面
         historyApiFallback:{
             index:'/dist/index.html'
+        },
+        proxy:{
+            '/manage':{
+                target:'http://admintest.happymmall.com',
+                changeOrigin:true
+                //请求与后台接口时，会认为是拿http://admintest.happymmall.com请求的，如果不加则是http://localhost:8086
+            },
+            '/user/logout.do':{
+                target:'http://admintest.happymmall.com',
+                changeOrigin:true
+            }
         }
    },
 
