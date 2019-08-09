@@ -1,8 +1,8 @@
-import React from 'react';
-import RcPagination from 'rc-pagination';
+import React        from 'react';
+import RcPagination   from 'rc-pagination';
 import 'rc-pagination/dist/rc-pagination.min.css';
 
-//通用分页组件
+// 通用分页组件
 class Pagination extends React.Component{
     constructor(props){
         super(props);
@@ -12,10 +12,12 @@ class Pagination extends React.Component{
             <div className="row">
                 <div className="col-md-12">
                     <RcPagination {...this.props}
-                    hideOnSinglePage showQuickJumper/>
+                                  hideOnSinglePage
+                                  showQuickJumper/>
                 </div>
             </div>
-        )
+        );
     }
 }
+
 export default Pagination;

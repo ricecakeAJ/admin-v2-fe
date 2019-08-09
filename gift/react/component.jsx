@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import ReactDom from 'react-dom';
 
 //基础component写法

@@ -1,37 +1,41 @@
-import React from 'react';
-import './index.scss';
-import PageTitle from 'component/page-title/index.jsx';
-import {BrowserRouter as Router,Route,Link,Switch,Redirect } from 'react-router-dom';
-import MUtil from 'util/mm.jsx';
-import Statistic from 'service/statistic-service.jsx';
-const _mm=new MUtil();
-const _statistic=new Statistic();
+
+
+import React        from 'react';
+import { Link }     from 'react-router-dom';
+
+import MUtil        from 'util/mm.jsx'
+import Statistic    from 'service/statistic-service.jsx'
+
+const _mm           = new MUtil();
+const _statistic    = new Statistic();
+
+import PageTitle    from 'component/page-title/index.jsx';
+import './index.scss'
 
 class Home extends React.Component{
     constructor(props){
         super(props);
-        this.state={
-            userCount:'-',
-            productCount:'-',
-            orderCount:'-'
+        this.state = {
+            userCount       : '-',
+            productCount    : '-',
+            orderCount      : '-'
         }
     }
     componentDidMount(){
         this.loadCount();
     }
     loadCount(){
-        _statistic.getHomeCount().then(res=>{
+        _statistic.getHomeCount().then(res => {
             this.setState(res);
-        },err=>{
+        }, errMsg => {
             _mm.errorTips(errMsg);
         });
     }
     render(){
         return (
             <div id="page-wrapper">
-                <PageTitle title="首页"/>
+                <PageTitle title="首页" />
                 <div className="row">
-                    {/*<div className="col-md-12">/!*在中等屏幕大小占12个格*!/*/}
                     <div className="col-md-4">
                         <Link to="/user" className="color-box brown">
                             <p className="count">{this.state.userCount}</p>

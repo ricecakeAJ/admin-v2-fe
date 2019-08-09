@@ -10,24 +10,21 @@ http://creativecommons.org/licenses/by/3.0/
 ------------------------------------------------*/
 body {
     font-family: 'Open Sans', sans-serif;
-    background:#f3f3f3 ;
+    background: #f3f3f3;
 }
 
 #wrapper {
     width: 100%;
-
 }
 
 #page-wrapper {
     margin: 0 0 0 260px;
-    padding:15px 30px;
-
+    padding: 15px 30px;
 }
 
 .text-center {
     text-align: center;
 }
-
 
 
 h1, .h1, h2, .h2, h3, .h3 {
@@ -53,7 +50,6 @@ h4 {
 p {
     font-size: 16px;
     line-height: 25px;
-    /*padding-top: 20px;*/
 }
 
 .panel {
@@ -81,9 +77,9 @@ p {
     position: fixed;
     width: 260px;
     top: 60px;
-    bottom:0;
-    overflow-y: auto;
-    background-color: #2b2e33;
+    bottom: 0;
+    overflow-y : auto;
+    background: #2b2e33;
 }
 
 #page-wrapper {
@@ -403,7 +399,6 @@ footer p {
 .navbar-brand b {
     margin-right:5px;
     color: #2DAFCB;
-    font-weight:500;
 }
 
 .top-navbar .nav > li {
@@ -412,7 +407,6 @@ footer p {
     margin: 0px;
     padding: 0px 10px;
 }
-
 
 .top-navbar .nav > li > a {
     position: relative;
@@ -427,21 +421,18 @@ footer p {
     color: #319DB5 !important;
     background: transparent;
 }
-.top-navbar .nav > li:hover .dropdown-menu{ /*鼠标滑过出现*/
+
+.top-navbar .nav > li:hover .dropdown-menu{
     display: block;
 }
 .top-navbar .dropdown-menu {
     min-width: 230px;
+    top: 98%;
     border-radius: 0 0 4px 4px;
-    /*top:98%;*/
-    margin-top:0;/*与项目不同处*/
-
 }
-
-.top-navbar .dropdown-menu >li>a{
+.dropdown-menu > li > a{
     cursor: pointer;
 }
-
 .top-navbar .dropdown-menu > li > a:hover, .top-navbar .dropdown-menu > li > a:focus {
     color: #225081;
     background: none;
@@ -537,7 +528,6 @@ ul.nav.nav-second-level.collapse.in {
 
 .navbar-side {
     border: none;
-
 }
 
 .top-navbar {
@@ -548,11 +538,10 @@ ul.nav.nav-second-level.collapse.in {
 .top-navbar .nav > li > a > i {
     margin-right: 2px;
 }
-.top-navbar .nav > li > a >span {
-    color:#666;
-    margin-right:5px;
+.top-navbar .nav > li > a > span {
+    color: #666;
+    margin-right: 5px;
 }
-
 .top-navbar .navbar-brand:hover {
     color: #2DAFCB;
     background-color: rgb(43, 46, 51);
@@ -606,24 +595,26 @@ ul.nav.nav-second-level.collapse.in {
 ------------------------------------------------*/
 
 @media(max-width:768px) {
+
     .top-navbar{
-        position:relative;
+        position: relative;
     }
     .top-navbar .navbar-brand{
-        width:100%;
-    }
-    .navbar-side {
-        z-index: 1;
-        position: relative;
-        top:0px;
-        width:100%;
-    }
-    #page-wrapper {
-        margin: 0 0 0 0px;
-        padding: 15px 30px;
-        top:0;
+        width: 100%;
     }
 
+
+    .navbar-side {
+        z-index: 1;
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+    #page-wrapper {
+        margin: 0;
+        padding: 15px 30px;
+        top: 0;
+    }
 }
 
 
